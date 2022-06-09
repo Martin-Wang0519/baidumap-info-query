@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>地图信息查询</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="rc.qrc">
+    <normaloff>:/rc/earth.png</normaloff>:/rc/earth.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QComboBox" name="cityComboBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>楷体</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;楷体&quot;;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <family>楷体</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;楷体&quot;;</string>
+          </property>
+          <property name="text">
+           <string>选择城市</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="provinceComboBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>楷体</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;楷体&quot;;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <family>楷体</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;楷体&quot;;</string>
+          </property>
+          <property name="text">
+           <string>输入关键词</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="keyWordsEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>楷体</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;楷体&quot;;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_8">
+          <property name="font">
+           <font>
+            <family>楷体</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;楷体&quot;;</string>
+          </property>
+          <property name="text">
+           <string>选择省份</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="selectSavePathButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>隶书</family>
+            <pointsize>30</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 30pt &quot;隶书&quot;;</string>
+          </property>
+          <property name="text">
+           <string>选择保存文件夹</string>
+          </property>
+          <property name="icon">
+           <iconset resource="rc.qrc">
+            <normaloff>:/rc/openFolder.png</normaloff>:/rc/openFolder.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>48</width>
+            <height>48</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="queryButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>隶书</family>
+            <pointsize>30</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 30pt &quot;隶书&quot;;</string>
+          </property>
+          <property name="text">
+           <string>查询</string>
+          </property>
+          <property name="icon">
+           <iconset resource="rc.qrc">
+            <normaloff>:/rc/test.png</normaloff>:/rc/test.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>48</width>
+            <height>48</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Times New Roman'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'SimSun'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <action name="action_line">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Line.png</normaloff>:/rc/Line.png</iconset>
+   </property>
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="action_triangle">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/Triangle.png</normaloff>:/rc/Triangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>三角形</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_rectangle">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Rectangle.png</normaloff>:/rc/Rectangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="action_circle">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Circle.png</normaloff>:/rc/Circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆</string>
+   </property>
+  </action>
+  <action name="action_ellipse">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/Ellipse.png</normaloff>:/rc/Ellipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_polygon">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Octagon.png</normaloff>:/rc/Octagon.png</iconset>
+   </property>
+   <property name="text">
+    <string>多边形</string>
+   </property>
+  </action>
+  <action name="action_palette">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Palette.png</normaloff>:/rc/Palette.png</iconset>
+   </property>
+   <property name="text">
+    <string>调色板</string>
+   </property>
+  </action>
+  <action name="action_translate">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Translate.png</normaloff>:/rc/Translate.png</iconset>
+   </property>
+   <property name="text">
+    <string>移动</string>
+   </property>
+  </action>
+  <action name="action_trash">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Trash.png</normaloff>:/rc/Trash.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="action_rotate">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/Rotate.png</normaloff>:/rc/Rotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>旋转</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_zoomin">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/ZoomIn.png</normaloff>:/rc/ZoomIn.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_zoomout">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/ZoomOut.png</normaloff>:/rc/ZoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/Open.png</normaloff>:/rc/Open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="action_clip">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/Clip.png</normaloff>:/rc/Clip.png</iconset>
+   </property>
+   <property name="text">
+    <string>裁剪</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_curve">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/Curve.png</normaloff>:/rc/Curve.png</iconset>
+   </property>
+   <property name="text">
+    <string>曲线</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_addpoint">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/AddPoint.png</normaloff>:/rc/AddPoint.png</iconset>
+   </property>
+   <property name="text">
+    <string>加粗</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_deletepoint">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/rc/DeletePoint.png</normaloff>:/rc/DeletePoint.png</iconset>
+   </property>
+   <property name="text">
+    <string>减细</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_pre">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/pre.png</normaloff>:/rc/pre.png</iconset>
+   </property>
+   <property name="text">
+    <string>上一张</string>
+   </property>
+   <property name="toolTip">
+    <string>上一张</string>
+   </property>
+  </action>
+  <action name="action_next">
+   <property name="icon">
+    <iconset resource="rc.qrc">
+     <normaloff>:/rc/next.png</normaloff>:/rc/next.png</iconset>
+   </property>
+   <property name="text">
+    <string>下一张</string>
+   </property>
+   <property name="toolTip">
+    <string>下一张</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rc.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>provinceComboBox</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>provinceComboBox_currentIndexChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>265</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cityComboBox</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cityComboBox_currentIndexChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>keyWordsEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>keyWords_textChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>selectSavePathButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>selectSavePathButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>177</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>168</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>queryButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>queryButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>344</x>
+     <y>168</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>provinceComboBox_currentIndexChanged()</slot>
+  <slot>cityComboBox_currentIndexChanged()</slot>
+  <slot>keyWords_textChanged()</slot>
+  <slot>queryButton_clicked()</slot>
+  <slot>selectSavePathButton_clicked()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="/">
+    <file>rc/earth.png</file>
+    <file>rc/win.png</file>
+    <file>rc/test.png</file>
+    <file>rc/add_neg-pic.png</file>
+    <file>rc/train.png</file>
+    <file>rc/add_pic.png</file>
+    <file>rc/mail.png</file>
+    <file>rc/four-leaves.png</file>
+    <file>rc/data-one.png</file>
+    <file>rc/screenshot.png</file>
+    <file>rc/folder-download.png</file>
+    <file>rc/Circle.png</file>
+    <file>rc/openFolder.png</file>
+    <file>rc/Line.png</file>
+    <file>rc/next.png</file>
+    <file>rc/Octagon.png</file>
+    <file>rc/Open.png</file>
+    <file>rc/paint.png</file>
+    <file>rc/Palette.png</file>
+    <file>rc/pre.png</file>
+    <file>rc/Rectangle.png</file>
+    <file>rc/Save.png</file>
+    <file>rc/Translate.png</file>
+    <file>rc/Trash.png</file>
+  </qresource>
+</RCC>
